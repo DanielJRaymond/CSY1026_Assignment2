@@ -1,8 +1,8 @@
 /*
 Authors: 
 Daniel Raymond
-Gabriel
-Harry
+Gabriel Cruceanu
+Harry Carter
 
 
 */
