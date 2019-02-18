@@ -30,6 +30,8 @@ task_id				NUMBER(4)
 
 
 CREATE TABLE meetings (
+project_id			NUMBER(4),
+task_id				NUMBER(4),
 meeting_id			NUMBER(4),
 meeting_date		DATE,
 meeting_location	VARCHAR2(30) NOT NULL

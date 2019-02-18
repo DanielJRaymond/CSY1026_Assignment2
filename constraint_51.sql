@@ -27,9 +27,9 @@ ADD CONSTRAINTS pk_meetings
 PRIMARY KEY meetings(meeting_id);
 
 
-ALTER TABLE
-ADD CONSTRAINTS
-PRIMARY KEY ();
+ALTER TABLE actions
+ADD CONSTRAINTS pk_actions
+PRIMARY KEY actions();
 --FOREIGN KEYS
 
 
