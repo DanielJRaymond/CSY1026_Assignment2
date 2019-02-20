@@ -24,7 +24,6 @@ meeting_location VARCHAR(30) NOT NULL
 );
 
 
-
 --DEFAULT
 
 

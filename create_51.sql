@@ -81,8 +81,4 @@ deadline			DATE
 
 --SEQUENCE
 
-CREATE SEQUENCE seq_stages
-INCREMENT BY 1
-START WITH 1;
-
 
