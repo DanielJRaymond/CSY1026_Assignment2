@@ -47,11 +47,24 @@ PRIMARY KEY (meeting_id);
 
 ALTER TABLE actions
 ADD CONSTRAINT pk_actions
-PRIMARY KEY (meeting_id, owner, deadline);
+PRIMARY KEY (owner);
 
 
 --FOREIGN KEYS
 
+ALTER TABLE project_stages
+ADD CONSTRAINT fk_ps_stages
+FOREIGN KEY (stage_name)
+REFERENCES stages(stage_name);
 
+ALTER TABLE meetings
+ADD CONSTRAINT fk_m_project_teams
+FOREIGN KEY (project_id)
+REFERENCES project_teams(project_id, team_no);
+
+ALTER TABLE meetings
+ADD CONSTRAINT fk_m_project_stages
+FOREIGN KEY (stage_name)
+REFERENCES project_stages(stage_name);
 
 
