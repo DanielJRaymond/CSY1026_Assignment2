@@ -13,6 +13,9 @@ DROP CONSTRAINT fk_ps_stages;
 ALTER TABLE meetings
 DROP CONSTRAINT fk_m_stages;
 
+ALTER TABLE actions
+DROP CONSTRAINT fk_a_meetings;
+
 
 --PRIMARY
 
