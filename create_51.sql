@@ -46,7 +46,7 @@ end_date	DATE
 
 
 CREATE TABLE project_stages (
-project_id			NUMBER(4),
+project_id			NUMBER(8),
 task_id				NUMBER(4)
 );
 
@@ -54,8 +54,9 @@ task_id				NUMBER(4)
 
 
 CREATE TABLE meetings (
-project_id			NUMBER(4),
+project_id			NUMBER(8),
 task_id				NUMBER(4),
+team_no				NUMBER(4),
 meeting_id			NUMBER(4),
 meeting_date		DATE,
 meeting_location	VARCHAR2(30)
@@ -73,3 +74,11 @@ meeting_id			NUMBER(4),
 owner				VARCHAR2(25),
 deadline			DATE
 );
+
+--SEQUENCE
+
+CREATE SEQUENCE seq_stages
+INCREMENT BY 1
+START WITH 1;
+
+
