@@ -5,14 +5,28 @@ Gabriel Cruceanu
 Harry Carter
 */
 
+--NOT NULL
 
+
+
+--DEFAULT
+
+ALTER TABLE stages
+ADD CONSTRAINTS DF_stages
+DEFAULT SYSDATE
+FOR start_date;
+
+ALTER TABLE stages
+ADD CONSTRAINTS DF_stages
+DEFAULT SYSDATE
+FOR end_date;
 
 
 --PRIMARY KEYS
 
 ALTER TABLE stages
 ADD CONSTRAINTS pk_stages
-PRIMARY KEY stages(task_id);
+PRIMARY KEY stages(stage_name);
 
 
 
@@ -34,6 +48,4 @@ PRIMARY KEY actions();
 
 
 
---NOT NULL
 
---DEFAULT

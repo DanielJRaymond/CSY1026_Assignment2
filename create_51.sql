@@ -32,7 +32,7 @@ team_no NUMBER(4);)
 
 
 CREATE TABLE stages (
-task_id		NUMBER(4),	
+stage_name	VARCHAR2(20),
 start_date	DATE,
 end_date	DATE
 );
@@ -47,7 +47,7 @@ end_date	DATE
 
 CREATE TABLE project_stages (
 project_id			NUMBER(8),
-task_id				NUMBER(4)
+stage_name			VARCHAR2(20)
 );
 
 
@@ -55,8 +55,8 @@ task_id				NUMBER(4)
 
 CREATE TABLE meetings (
 project_id			NUMBER(8),
-task_id				NUMBER(4),
 team_no				NUMBER(4),
+stage_name			VARCHAR2(20),
 meeting_id			NUMBER(4),
 meeting_date		DATE,
 meeting_location	VARCHAR2(30)
