@@ -6,28 +6,32 @@ Harry Carter
 */
 
 CREATE TABLE empolyees (
-employee_id NUMBER(8);
-first_name VARCHAR2(15);
-surname VARCHAR2(20);
-gender CHAR(1);
-contact_no CHAR(10);
-dob DATE;
-joindate DATE;)
+employee_id NUMBER(8),
+first_name VARCHAR2(15),
+surname VARCHAR2(20),
+gender CHAR(1),
+contact_no CHAR(10),
+dob DATE,
+joindate DATE
+  );
 
 CREATE TABLE specialisms (
-specialism_id NUMBER(4);
-specialism_name VARCHAR2(20);
-specialism_desc VARCHAR2(40);)
+specialism_id NUMBER(4),
+specialism_name VARCHAR2(20),
+specialism_desc VARCHAR2(40)
+  );
 
 CREATE TABLE employees_specialisms (
-employee_id NUMBER(8); --FK
-specialism_id NUMBER (4); --FK
-specialism_name VARCHAR2(20);)
+employee_id NUMBER(8), --FK
+specialism_id NUMBER (4), --FK
+specialism_name VARCHAR2(20)
+  );
 
 CREATE TABLE projects_teams (
-employee_id NUMBER(8);
-project_id NUMBER(8);
-team_no NUMBER(4);)
+employee_id NUMBER(8),
+project_id NUMBER(8),
+team_no NUMBER(4)
+  );
 
 
 
