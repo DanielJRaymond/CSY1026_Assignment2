@@ -22,15 +22,6 @@ meeting_location VARCHAR(30) NOT NULL
 
 --DEFAULT
 
-ALTER TABLE stages
-ADD CONSTRAINTS DF_stages
-DEFAULT SYSDATE
-FOR start_date;
-
-ALTER TABLE stages
-ADD CONSTRAINTS DF_stages
-DEFAULT SYSDATE
-FOR end_date;
 
 
 --PRIMARY KEYS
@@ -38,8 +29,6 @@ FOR end_date;
 ALTER TABLE stages
 ADD CONSTRAINTS pk_stages
 PRIMARY KEY stages(stage_name);
-
-
 
 
 ALTER TABLE project_stages
@@ -54,7 +43,9 @@ PRIMARY KEY meetings(meeting_id);
 
 ALTER TABLE actions
 ADD CONSTRAINTS pk_actions
-PRIMARY KEY actions();
+PRIMARY KEY actions(meeting_id, owner, deadline);
+
+
 --FOREIGN KEYS
 
 
