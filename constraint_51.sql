@@ -67,4 +67,9 @@ ADD CONSTRAINT fk_m_stages
 FOREIGN KEY (stage_name)
 REFERENCES stages(stage_name);
 
+ALTER TABLE actions
+ADD CONSTRAINT fk_a_meetings
+FOREIGN KEY (meeting_id)
+REFERENCES meetings(meeting_id);
+
 

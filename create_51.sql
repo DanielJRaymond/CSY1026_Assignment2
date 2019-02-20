@@ -81,4 +81,6 @@ deadline			DATE
 
 --SEQUENCE
 
-
+CREATE SEQUENCE seq_meetings
+INCREMENT BY 1
+START WITH 1;

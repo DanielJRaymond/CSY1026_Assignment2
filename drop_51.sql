@@ -42,7 +42,7 @@ DROP TABLE actions;
 
 --SEQUENCE
 
-
+DROP SEQUENCE seq_meetings;
 
 
 PURGE RECYCLEBIN;
