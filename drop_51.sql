@@ -7,7 +7,11 @@ Harry Carter
 
 --FOREIGN
 
+ALTER TABLE project_stages
+DROP CONSTRAINT fk_ps_stages;
 
+ALTER TABLE meetings
+DROP CONSTRAINT fk_m_stages;
 
 
 --PRIMARY
@@ -38,7 +42,6 @@ DROP TABLE actions;
 
 --SEQUENCE
 
-DROP SEQUENCE seq_stages;
 
 
 
