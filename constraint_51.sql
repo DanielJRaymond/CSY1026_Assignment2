@@ -8,13 +8,18 @@ Harry Carter
 --NOT NULL
 
 ALTER TABLE stages MODIFY (
-start_date DATE NOT NULL,
+start_date DATE NOT NULL
+);
+
+ALTER TABLE stages MODIFY (
 end_date DATE NOT NULL
 );
 
+ALTER TABLE meetings MODIFY (
+meeting_date DATE NOT NULL
+);
 
-ALTER TABLE stages MODIFY (
-meeting_date DATE NOT NULL,
+ALTER TABLE meetings MODIFY (
 meeting_location VARCHAR(30) NOT NULL
 );
 
