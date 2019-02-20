@@ -13,7 +13,7 @@ end_date DATE NOT NULL
 );
 
 
-ALTER TABLE MODIFY (
+ALTER TABLE stages MODIFY (
 meeting_date DATE NOT NULL,
 meeting_location VARCHAR(30) NOT NULL
 );
