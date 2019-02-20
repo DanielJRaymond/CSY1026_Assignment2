@@ -32,23 +32,23 @@ meeting_location VARCHAR(30) NOT NULL
 --PRIMARY KEYS
 
 ALTER TABLE stages
-ADD CONSTRAINTS pk_stages
-PRIMARY KEY stages(stage_name);
+ADD CONSTRAINT pk_stages
+PRIMARY KEY (stage_name);
 
 
 ALTER TABLE project_stages
-ADD CONSTRAINTS pk_project_stages
-PRIMARY KEY project_stages(project_id, task_id);
+ADD CONSTRAINT pk_project_stages
+PRIMARY KEY (project_id, stage_name);
 
 
 ALTER TABLE meetings
-ADD CONSTRAINTS pk_meetings
-PRIMARY KEY meetings(meeting_id);
+ADD CONSTRAINT pk_meetings
+PRIMARY KEY (meeting_id);
 
 
 ALTER TABLE actions
-ADD CONSTRAINTS pk_actions
-PRIMARY KEY actions(meeting_id, owner, deadline);
+ADD CONSTRAINT pk_actions
+PRIMARY KEY (meeting_id, owner, deadline);
 
 
 --FOREIGN KEYS
