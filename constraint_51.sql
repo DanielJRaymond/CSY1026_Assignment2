@@ -33,3 +33,7 @@ PRIMARY KEY actions();
 --FOREIGN KEYS
 
 
+
+--NOT NULL
+
+--DEFAULT
