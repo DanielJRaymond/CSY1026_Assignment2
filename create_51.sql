@@ -7,6 +7,7 @@ Harry Carter
 
 CREATE TABLE empolyees (
 employee_id NUMBER(8),
+title VARCHAR2(10),
 first_name VARCHAR2(15),
 last_name VARCHAR2(20),
 gender CHAR(1),
