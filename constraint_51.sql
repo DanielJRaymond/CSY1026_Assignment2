@@ -30,6 +30,14 @@ meeting_location VARCHAR(30) NOT NULL
 
 --PRIMARY KEYS
 
+ALTER TABLE employees
+ADD CONSTRAINT pk_employees
+PRIMARY KEY (employee_id);
+
+ALTER TABLE specialisms
+ADD CONSTRAINT pk_specialisms
+PRIMARY KEY (specialism_id);
+
 ALTER TABLE stages
 ADD CONSTRAINT pk_stages
 PRIMARY KEY (stage_name);
