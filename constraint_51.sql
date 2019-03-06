@@ -52,6 +52,27 @@ PRIMARY KEY (owner);
 
 --FOREIGN KEYS
 
+ALTER TABLE employees_specialisms
+ADD CONSTRAINT fk_es_employees
+FOREIGN KEY (employee_id)
+REFERENCES employees(employee_id);
+
+ALTER TABLE employees_specialism
+ADD CONSTRAINT fk_es_specialisms
+FOREIGN KEY (specialism_id)
+REFERENCES specialisms(specialism_id);
+
+ALTER TABLE project_teams
+ADD CONSTRAINT fk_pt_employee
+FOREIGN KEY (employee_id)
+REFERENCES employees(employee_id);
+
+ALTER TABLE project_teams
+ADD CONSTRAINT fk_pt_projects
+FOREIGN KEY (project_id)
+REFERENCES projects(project_id);
+
+
 ALTER TABLE project_stages
 ADD CONSTRAINT fk_ps_stages
 FOREIGN KEY (stage_name)
