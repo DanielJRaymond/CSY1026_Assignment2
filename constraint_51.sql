@@ -57,16 +57,10 @@ ADD CONSTRAINT fk_pt_projects
 FOREIGN KEY (project_id)
 REFERENCES projects(project_id);
 
-
 ALTER TABLE project_stages
 ADD CONSTRAINT fk_ps_stages
 FOREIGN KEY (stage_name)
 REFERENCES stages(stage_name);
-
---ALTER TABLE meetings
---ADD CONSTRAINT fk_m_projects
---FOREIGN KEY (project_id)
---REFERENCES projects(project_id);
 
 ALTER TABLE meetings
 ADD CONSTRAINT fk_m_stages
