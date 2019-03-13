@@ -17,7 +17,7 @@ PRIMARY KEY (specialism_id);
 
 ALTER TABLE stages
 ADD CONSTRAINT pk_stages
-PRIMARY KEY (stage_name);
+PRIMARY KEY (stage_id);
 
 
 ALTER TABLE project_stages
@@ -47,25 +47,25 @@ ADD CONSTRAINT fk_es_specialisms
 FOREIGN KEY (specialism_id)
 REFERENCES specialisms(specialism_id);
 
-ALTER TABLE project_teams
+ALTER TABLE projects_teams
 ADD CONSTRAINT fk_pt_employee
 FOREIGN KEY (employee_id)
 REFERENCES employees(employee_id);
 
-ALTER TABLE project_teams
+ALTER TABLE projects_teams
 ADD CONSTRAINT fk_pt_projects
 FOREIGN KEY (project_id)
 REFERENCES projects(project_id);
 
 ALTER TABLE project_stages
 ADD CONSTRAINT fk_ps_stages
-FOREIGN KEY (stage_name)
+FOREIGN KEY (stage_id)
 REFERENCES stages(stage_name);
 
 ALTER TABLE meetings
 ADD CONSTRAINT fk_m_project_stages
-FOREIGN KEY (project_id, stage_name)
-REFERENCES project_stages(project_id, stage_name);
+FOREIGN KEY (project_id, stage_id)
+REFERENCES project_stages(project_id, stage_id);
 
 ALTER TABLE meetings
 ADD CONSTRAINT fk_m_projects_teams
