@@ -51,19 +51,19 @@ end_date	DATE NOT NULL DEFAULT SYSDATE
 
 
 CREATE TABLE project_stages (
-project_id			NUMBER(8),
-stage_name			VARCHAR2(20)
+project_id			 NUMBER(8),
+stage_name			 VARCHAR2(20),
 );
 
 
 
 
 CREATE TABLE meetings (
-project_id			NUMBER(8),
-team_no				NUMBER(4),
-stage_name			VARCHAR2(20),
-meeting_id			NUMBER(4),
-meeting_date		DATE NOT NULL DEFAULT SYSDATE,
+project_id			  NUMBER(8),
+stage_name			  VARCHAR2(20),
+team_no				    NUMBER(4),
+meeting_id			  NUMBER(4),
+meeting_date		  DATE NOT NULL DEFAULT SYSDATE,
 meeting_location	VARCHAR2(30) NOT NULL
 );
 
