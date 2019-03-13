@@ -37,6 +37,7 @@ team_no NUMBER(4) NOT NULL
 
 
 CREATE TABLE stages (
+stage_id    NUMBER(4),
 stage_name	VARCHAR2(20),
 start_date	DATE NOT NULL DEFAULT SYSDATE,
 end_date	DATE NOT NULL DEFAULT SYSDATE
@@ -52,7 +53,7 @@ end_date	DATE NOT NULL DEFAULT SYSDATE
 
 CREATE TABLE project_stages (
 project_id			 NUMBER(8),
-stage_name			 VARCHAR2(20),
+stage_id			   NUMBER(4),
 );
 
 
@@ -60,7 +61,7 @@ stage_name			 VARCHAR2(20),
 
 CREATE TABLE meetings (
 project_id			  NUMBER(8),
-stage_name			  VARCHAR2(20),
+stage_id			    NUMBER(4),
 team_no				    NUMBER(4),
 meeting_id			  NUMBER(4),
 meeting_date		  DATE NOT NULL DEFAULT SYSDATE,
