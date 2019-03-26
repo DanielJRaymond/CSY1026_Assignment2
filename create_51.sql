@@ -7,79 +7,59 @@ Harry Carter
 
 CREATE TABLE empolyees (
 employee_id NUMBER(8),
-title VARCHAR2(10),
-first_name VARCHAR2(15),
-last_name VARCHAR2(20),
-gender CHAR(1) DEFAULT 'M',
-contact_no CHAR(10) NOT NULL,
-dob DATE NOT NULL,
-joindate DATE NOT NULL DEFAULT SYSDATE
+title 		VARCHAR2(10),
+first_name 	VARCHAR2(15),
+last_name 	VARCHAR2(20),
+gender 		CHAR(1) DEFAULT 'M',
+contact_no 	CHAR(10) NOT NULL,
+dob 		DATE NOT NULL,
+joindate 	DATE DEFAULT SYSDATE
   );
 
 CREATE TABLE specialisms (
-specialism_id NUMBER(4),
+specialism_id 	NUMBER(4),
 specialism_name VARCHAR2(20),
 specialism_desc VARCHAR2(40)
   );
 
 CREATE TABLE employees_specialisms (
-employee_id NUMBER(8),
-specialism_id NUMBER (4), 
+employee_id 	NUMBER(8),
+specialism_id 	NUMBER (4), 
 specialism_name VARCHAR2(20)
   );
 
 CREATE TABLE projects_teams (
 employee_id NUMBER(8),
-project_id NUMBER(8),
-team_no NUMBER(4) NOT NULL
+project_id 	NUMBER(8),
+team_no 	NUMBER(4) NOT NULL
   );
 
-
-
 CREATE TABLE stages (
-stage_id    NUMBER(4),
+stage_id   	NUMBER(4),
 stage_name	VARCHAR2(20),
-start_date	DATE NOT NULL DEFAULT SYSDATE,
-end_date	DATE NOT NULL DEFAULT SYSDATE
+start_date	DATE DEFAULT SYSDATE,
+end_date	DATE DEFAULT SYSDATE
 );
-
-
-
-
-
-
-
-
 
 CREATE TABLE project_stages (
-project_id			 NUMBER(8),
-stage_id			   NUMBER(4),
+project_id	NUMBER(8),
+stage_id	NUMBER(4)
 );
-
-
-
 
 CREATE TABLE meetings (
-project_id			  NUMBER(8),
-stage_id			    NUMBER(4),
-team_no				    NUMBER(4),
-meeting_id			  NUMBER(4),
-meeting_date		  DATE NOT NULL DEFAULT SYSDATE,
+project_id			NUMBER(8),
+stage_id			NUMBER(4),
+team_no				NUMBER(4),
+meeting_id			NUMBER(4),
+meeting_date		DATE DEFAULT SYSDATE,
 meeting_location	VARCHAR2(30) NOT NULL
-);
-
-
-
-
-
-
-
+ );
 
 CREATE TABlE actions (
-meeting_id			NUMBER(4),
-owner				VARCHAR2(25),
-deadline			DATE NOT NULL DEFAULT SYSDATE
-);
+meeting_id	NUMBER(4),
+owner		VARCHAR2(25),
+deadline	DATE DEFAULT SYSDATE
+ );
 
 --SEQUENCE
 
