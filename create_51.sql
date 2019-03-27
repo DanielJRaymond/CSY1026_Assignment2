@@ -46,7 +46,7 @@ cost NUMBER(8,2)
 CREATE TABLE project_resources (
 project_id NUMBER(8),
 resource_id NUMBER(8)
-quantity NUMBER(4) DEFAULT '1'
+quantity NUMBER(4) NOT NULL
 );
               
 CREATE TABLE employees_specialisms (
