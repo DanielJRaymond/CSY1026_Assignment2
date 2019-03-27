@@ -55,7 +55,7 @@ specialism_id 	NUMBER (4),
 specialism_name VARCHAR2(20)
   );
               
-CREATE TABLE projects_teams (
+CREATE TABLE project_teams (
 employee_id NUMBER(8),
 project_id 	NUMBER(8),
 team_no 	NUMBER(4) NOT NULL
