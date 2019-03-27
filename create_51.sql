@@ -28,20 +28,27 @@ title VARCHAR2(25),
 description VARCHAR2(100),
 start_date DATE,
 end_date DATE,
-budget NUMBER(8,2));
+budget NUMBER(8,2)
+);
               
 CREATE TABLE resources (
 resource_id NUMBER(8),
-description VARCHAR2(25),
-cost NUMBER(8,2));
+name VARCHAR2(25),
+description VARCHAR2(100),
+cost NUMBER(8,2)
+);
                    
 CREATE TABLE project_costs (
-project_cost_id NUMBER(8));
+project_cost_id NUMBER(8),
+project_id NUMBER(8),
+cost NUMBER(8,2)
+);
                        
 CREATE TABLE project_resources (
 project_id NUMBER(8),
 resource_id NUMBER(8)
-quantity NUMBER(4) DEFAULT '1');
+quantity NUMBER(4) DEFAULT '1'
+);
               
 CREATE TABLE employees_specialisms (
 employee_id 	NUMBER(8),
