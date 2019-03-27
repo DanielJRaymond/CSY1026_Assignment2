@@ -71,7 +71,7 @@ DROP CONSTRAINT pk_project_resources;
 
 --TABLES
 
-DROP TABLE empolyees;
+DROP TABLE employees;
 DROP TABLE specialisms;
 DROP TABLE employees_specialisms;
 DROP TABLE projects;
