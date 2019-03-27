@@ -51,6 +51,26 @@ VALUES (6093, 'DATABASE ENGINEER', 'MAINTAIN THE DATABASES');
 
 -- PROJECTS
 
+INSERT INTO projects
+(project_id, title, description, start_date, end_date, budget)
+VALUES (seq_projects.NEXTVAL, 'DOOR REPAIR', 'FIXING MOTORS WITHIN AUTOMATIC DOOR', '6-JUL-2001', '6-JUL-2026');
+
+INSERT INTO projects
+(project_id, title, description, start_date, end_date, budget)
+VALUES (seq_projects.NEXTVAL, 'ACTIONSCRIPT 4', 'UPDATE OLD ACTIONSCRIPT LANGUAGE', '1-OCT-2018', '30-JUN-2021');
+
+INSERT INTO projects
+(project_id, title, description, start_date, end_date, budget)
+VALUES (seq_projects.NEXTVAL, 'INTERNET REPAIR', 'TURNING IT OFF AND ON AGAIN', '9-DEC-2013', '16-DEC-2013');
+
+INSERT INTO projects
+(project_id, title, description, start_date, end_date, budget)
+VALUES (seq_projects.NEXTVAL, 'CRAMMING LAST MINUTE', 'ATTEMPTING TO FIX HORRIBLE MISTAKES BY LEAVING WORK THIS LONG', '1-JAN-2019', '13-JAN-2019');
+
+INSERT INTO projects
+(project_id, title, description, start_date, end_date, budget)
+VALUES (seq_projects.NEXTVAL, 'STAYING ALIVE', 'LONG TERM PROJECT REQUIRING MANY RESOURCES', '26-JUL-1999', '27-JUL-2101');
+
 
 -- STAGES
 INSERT INTO stages
