@@ -71,6 +71,26 @@ INSERT INTO projects
 (project_id, title, description, start_date, end_date, budget)
 VALUES (seq_projects.NEXTVAL, 'STAYING ALIVE', 'LONG TERM PROJECT REQUIRING MANY RESOURCES', '26-JUL-1999', '27-JUL-2101', 5000000.00);
 
+-- RESOURCES
+INSERT INTO resources
+(resource_id, name, description, cost)
+VALUES (seq_resources.NEXTVAL, 'CAT SCRATCHERS', 'CAT SCRATCHERS FOR PURRRSONAL USE', 2064.39);
+
+INSERT INTO resources
+(resource_id, name, description, cost)
+VALUES (seq_resources.NEXTVAL, 'A4 PAPER', 'GOOD QUALITY PRINTING PAPER', 7083.42);
+
+INSERT INTO resources
+(resource_id, name, description, cost)
+VALUES (seq_resources.NEXTVAL, 'STAPLE GUNS', 'HIGH QUALITY STAPLE GUNS FOR THE BI-ANUAL OFFICE SHOOTOUT', 8795.69);
+
+INSERT INTO resources
+(resource_id, name, description, cost)
+VALUES (seq_resources.NEXTVAL, 'STAPLES', 'AMMO FOR THE STAPLE GUNS', 5179.45);
+
+INSERT INTO resources
+(resource_id, name, description, cost)
+VALUES (seq_resources.NEXTVAL, 'SPICE', 'HE WHO CONTROLS THE SPICE CONTROLS THE UNIVERSE', 9972.91);
 
 -- STAGES
 INSERT INTO stages
