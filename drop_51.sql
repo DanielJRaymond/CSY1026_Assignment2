@@ -91,5 +91,7 @@ DROP SEQUENCE seq_employees;
 DROP SEQUENCE seq_specialisms;
 DROP SEQUENCE seq_teams;
 DROP SEQUENCE seq_stages;
+DROP SEQUENCE seq_projects;
+DROP SEQUENCE seq_resources;
 
 PURGE RECYCLEBIN;
