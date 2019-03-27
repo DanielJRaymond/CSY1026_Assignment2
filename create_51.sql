@@ -5,7 +5,7 @@ Gabriel Cruceanu
 Harry Carter
 */
 
-CREATE TABLE empolyees (
+CREATE TABLE employees (
 employee_id NUMBER(8),
 title 		VARCHAR2(10),
 first_name 	VARCHAR2(15),
