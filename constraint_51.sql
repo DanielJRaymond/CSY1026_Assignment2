@@ -39,10 +39,6 @@ ALTER TABLE resources
 ADD CONSTRAINT pk_resources
 PRIMARY KEY (resource_id);
 
-ALTER TABLE project_costs
-ADD CONSTRAINT pk_project_costs
-PRIMARY KEY (project_id, cost);
-
 ALTER TABLE project_resources
 ADD CONSTRAINT pk_project_resources
 PRIMARY KEY (project_id, resource_id);
@@ -54,7 +50,7 @@ ADD CONSTRAINT fk_es_employees
 FOREIGN KEY (employee_id)
 REFERENCES employees(employee_id);
 
-ALTER TABLE employees_specialism
+ALTER TABLE employees_specialisms
 ADD CONSTRAINT fk_es_specialisms
 FOREIGN KEY (specialism_id)
 REFERENCES specialisms(specialism_id);
