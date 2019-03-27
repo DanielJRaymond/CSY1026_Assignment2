@@ -28,6 +28,15 @@ DROP CONSTRAINT fk_m_stages;
 ALTER TABLE actions
 DROP CONSTRAINT fk_a_meetings;
 
+ALTER TABLE project_resources
+DROP CONSTRAINT fk_pr_projects;
+
+ALTER TABLE project_resources
+DROP CONSTRAINT fk_pr_resources;
+
+ALTER TABLE project_costs
+DROP CONSTRAINT fk_pc_projects;
+
 --PRIMARY
 
 ALTER TABLE employees
@@ -47,6 +56,18 @@ DROP CONSTRAINT pk_meetings;
 
 ALTER TABLE actions
 DROP CONSTRAINT pk_actions;
+
+ALTER TABLE projects
+DROP CONSTRAINT pk_projects;
+
+ALTER TABLE resources
+DROP CONSTRAINT pk_resources;
+
+ALTER TABLE project_costs
+DROP CONSTRAINT pk_project_costs;
+
+ALTER TABLE project_resources
+DROP CONSTRAINT pk_project_resources;
 
 --TABLES
 
