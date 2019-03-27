@@ -28,7 +28,7 @@ title VARCHAR2(25),
 description VARCHAR2(100),
 start_date DATE,
 end_date DATE,
-budget NUMBER(9,2)
+budget NUMBER(8,2)
 );
               
 CREATE TABLE resources (
