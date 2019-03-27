@@ -92,6 +92,53 @@ INSERT INTO resources
 (resource_id, name, description, cost)
 VALUES (seq_resources.NEXTVAL, 'SPICE', 'HE WHO CONTROLS THE SPICE CONTROLS THE UNIVERSE', 9972.91);
 
+-- PROJECT COSTS
+INSERT INTO project_costs
+(project_id, cost)
+VALUES (, .);
+
+INSERT INTO project_costs
+(project_id, cost)
+VALUES (, .);
+
+INSERT INTO project_costs
+(project_id, cost)
+VALUES (, .);
+
+INSERT INTO project_costs
+(project_id, cost)
+VALUES (, .);
+
+INSERT INTO project_costs
+(project_id, cost)
+VALUES (, .);
+
+-- PROJECT RESOURCES
+INSERT INTO project_resources
+(project_id, resource_id, quantity)
+VALUES (, , );
+
+INSERT INTO project_resources
+(project_id, resource_id, quantity)
+VALUES (, , );
+
+INSERT INTO project_resources
+(project_id, resource_id, quantity)
+VALUES (, , );
+
+INSERT INTO project_resources
+(project_id, resource_id, quantity)
+VALUES (, , );
+
+INSERT INTO project_resources
+(project_id, resource_id, quantity)
+VALUES (, , );
+
+-- MEETINGS
+INSERT INTO meetings
+()
+VALUES ();
+
 -- STAGES
 INSERT INTO stages
 (stage_id, stage_name, start_date, end_date)
