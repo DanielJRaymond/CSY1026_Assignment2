@@ -78,7 +78,7 @@ DROP TABLE projects;
 DROP TABLE resources;
 DROP TABLE project_resources;
 DROP TABLE project_costs;
-DROP TABLE projects_teams;
+DROP TABLE project_teams;
 DROP TABLE stages;
 DROP TABLE project_stages;
 DROP TABLE meetings;
@@ -90,6 +90,6 @@ DROP SEQUENCE seq_meetings;
 DROP SEQUENCE seq_employees;
 DROP SEQUENCE seq_specialisms;
 DROP SEQUENCE seq_teams;
-
+DROP SEQUENCE seq_stages;
 
 PURGE RECYCLEBIN;
