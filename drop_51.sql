@@ -10,7 +10,7 @@ Harry Carter
 ALTER TABLE employees_specialisms
 DROP CONSTRAINT fk_es_employees;
 
-ALTER TABLE employees_specialism
+ALTER TABLE employees_specialisms
 DROP CONSTRAINT fk_es_specialisms;
 
 ALTER TABLE project_teams
@@ -23,10 +23,16 @@ ALTER TABLE project_stages
 DROP CONSTRAINT fk_ps_stages;
 
 ALTER TABLE meetings
-DROP CONSTRAINT fk_m_stages;
+DROP CONSTRAINT fk_m_project_stages;
+
+ALTER TABLE meetings
+DROP CONSTRAINT fk_m_project_teams;
 
 ALTER TABLE actions
 DROP CONSTRAINT fk_a_meetings;
+
+ALTER TABLE project_costs
+DROP CONSTRAINT fk_pc_projects;
 
 ALTER TABLE project_resources
 DROP CONSTRAINT fk_pr_projects;
@@ -34,16 +40,12 @@ DROP CONSTRAINT fk_pr_projects;
 ALTER TABLE project_resources
 DROP CONSTRAINT fk_pr_resources;
 
-ALTER TABLE project_costs
-DROP CONSTRAINT fk_pc_projects;
+
 
 --PRIMARY
 
 ALTER TABLE employees
 DROP CONSTRAINT pk_employees;
-
-ALTER TABLE specialisms
-DROP CONSTRAINT pk_specialisms;
 
 ALTER TABLE stages
 DROP CONSTRAINT pk_stages;
@@ -63,11 +65,14 @@ DROP CONSTRAINT pk_projects;
 ALTER TABLE resources
 DROP CONSTRAINT pk_resources;
 
-ALTER TABLE project_costs
-DROP CONSTRAINT pk_project_costs;
-
 ALTER TABLE project_resources
 DROP CONSTRAINT pk_project_resources;
+
+ALTER TABLE project_teams
+DROP CONSTRAINT pk_project_teams;
+
+ALTER TABLE specialisms
+DROP CONSTRAINT pk_specialisms;
 
 --TABLES
 
@@ -95,3 +100,4 @@ DROP SEQUENCE seq_projects;
 DROP SEQUENCE seq_resources;
 
 PURGE RECYCLEBIN;
+
