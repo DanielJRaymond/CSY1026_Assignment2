@@ -6,6 +6,50 @@ Harry Carter
 */
 
 
+-- EMPLOYEES
+INSERT INTO employees
+(employee_id, title, first_name, last_name, gender, contact_no, dob, joindate)
+VALUES (seq_employees.NEXTVAL, 'MR', 'BILL', 'GOATS', 'M', '0714655814', '29-FEB-1974', '15-AUG-1997');
+
+INSERT INTO employees
+(employee_id, title, first_name, last_name, gender, contact_no, dob, joindate)
+VALUES (seq_employees.NEXTVAL, 'LORD', 'GARY', 'GYGOX', 'M', '0716482195', '27-JUL-1978', '1-DEC-1990');
+
+INSERT INTO employees
+(employee_id, title, first_name, last_name, gender, contact_no, dob, joindate)
+VALUES (seq_employees.NEXTVAL, 'MS', 'FREYJA', 'NEWBERRY', 'F', '0791472943', '11-OCT-1989', '4-JUN-2000');
+
+INSERT INTO employees
+(employee_id, title, first_name, last_name, gender, contact_no, dob, joindate)
+VALUES (seq_employees.NEXTVAL, 'MR', 'STEWART PHILLIPS', 'LOVECRAFT', 'M', '0794286173', '20-AUG-1890', '15-MAR-1937');
+
+INSERT INTO employees
+(employee_id, title, first_name, last_name, gender, contact_no, dob, joindate)
+VALUES (seq_employees.NEXTVAL, 'MR', 'STEVE', 'PLACEMENT', 'M', '0786492159', '24-FEB 1955', '5-OCT-2011');
+
+-- SPECIALISMS
+INSERT INTO specialisms
+(specialism_id, specialism_name, specialism_desc)
+VALUES (6087, 'SECURITY', 'KEEP EMPLOYEES SAFE AND, EAT DONUTS');
+
+INSERT INTO specialisms
+(specialism_id, specialism_name, specialism_desc)
+VALUES (9179, 'CODE MONKEY', 'CODES');
+
+INSERT INTO specialisms
+(specialism_id, specialism_name, specialism_desc)
+VALUES (7063, 'RECEPTIONIST', 'GREET VISITORS');
+
+INSERT INTO specialisms
+(specialism_id, specialism_name, specialism_desc)
+VALUES (1241, 'SERVER ENGINEER', 'MAINTAIN THE SERVERS ON THE HARDWARSE SIDE, UPDATEING OUT OF DATE OR FIXING MALFUNCTIONING PARTS');
+
+INSERT INTO specialisms
+(specialism_id, specialism_name, specialism_desc)
+VALUES (6093, 'DATABASE ENGINEER', 'MAINTAIN THE DATABASES');
+
+
+-- PROJECTS
 
 
 -- STAGES
