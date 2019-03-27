@@ -39,7 +39,6 @@ cost NUMBER(8,2)
 );
                    
 CREATE TABLE project_costs (
-project_cost_id NUMBER(8),
 project_id NUMBER(8),
 cost NUMBER(8,2)
 );
