@@ -19,21 +19,33 @@ ALTER TABLE stages
 ADD CONSTRAINT pk_stages
 PRIMARY KEY (stage_id);
 
-
 ALTER TABLE project_stages
 ADD CONSTRAINT pk_project_stages
 PRIMARY KEY (project_id, stage_name);
-
 
 ALTER TABLE meetings
 ADD CONSTRAINT pk_meetings
 PRIMARY KEY (meeting_id);
 
-
 ALTER TABLE actions
 ADD CONSTRAINT pk_actions
 PRIMARY KEY (owner);
 
+ALTER TABLE projects
+ADD CONSTRAINT pk_projects
+PRIMARY KEY (project_id);
+
+ALTER TABLE resources
+ADD CONSTRAINT pk_resources
+PRIMARY KEY (resource_id);
+
+ALTER TABLE project_costs
+ADD CONSTRAINT pk_project_costs
+PRIMARY KEY (project_cost_id);
+
+ALTER TABLE project_resources
+ADD CONSTRAINT pk_project_resources
+PRIMARY KEY (project_id, resource_id);
 
 --FOREIGN KEYS
 
@@ -76,5 +88,20 @@ ALTER TABLE actions
 ADD CONSTRAINT fk_a_meetings
 FOREIGN KEY (meeting_id)
 REFERENCES meetings(meeting_id);
+
+ALTER TABLE project_costs
+ADD CONSTRAINT fk_pc_projects
+FOREIGN KEY (project_id)
+REFERENCES projects(project_id);
+
+ALTER TABLE project_resources
+ADD CONSTRAINT fk_pr_projects
+FOREIGN KEY (project_id)
+REFERENCES projects(project_id);
+
+ALTER TABLE project_resources
+ADD CONSTRAINT fk_pr_resources
+FOREIGN KEY (resource_id)
+REFERENCES resources(resource_id);
 
 
