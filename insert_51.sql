@@ -233,7 +233,7 @@ VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL, seq_teams.NEXTVAL, seq_meeting
 
 INSERT INTO meetings
 (project_id, stage_id, team_no, meeting_id, meeting_date, meeting_location)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL, seq_teams.NEXTVAL, seq_meetings.NEXTVAL, '9-AUG-2008', 'MEEING ROOM F');
+VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL, seq_teams.NEXTVAL, seq_meetings.NEXTVAL, '9-AUG-2008', 'MEETING ROOM F');
 
 INSERT INTO meetings
 (project_id, stage_id, team_no, meeting_id, meeting_date, meeting_location)
