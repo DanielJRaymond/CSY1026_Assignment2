@@ -15,8 +15,8 @@ ALTER TABLE specialisms
 ADD CONSTRAINT pk_specialisms
 PRIMARY KEY (specialism_id);
 
-ALTER TABLE employee_specialisms
-ADD CONSTRAINT pk_employee_specialisms
+ALTER TABLE employees_specialisms
+ADD CONSTRAINT pk_employees_specialisms
 PRIMARY KEY (employee_id, specialism_id);
 
 ALTER TABLE stages
