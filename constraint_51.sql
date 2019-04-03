@@ -15,6 +15,10 @@ ALTER TABLE specialisms
 ADD CONSTRAINT pk_specialisms
 PRIMARY KEY (specialism_id);
 
+ALTER TABLE employee_specialisms
+ADD CONSTRAINT pk_employee_specialisms
+PRIMARY KEY (employee_id, specialism_id);
+
 ALTER TABLE stages
 ADD CONSTRAINT pk_stages
 PRIMARY KEY (stage_id);
@@ -42,6 +46,10 @@ PRIMARY KEY (resource_id);
 ALTER TABLE project_resources
 ADD CONSTRAINT pk_project_resources
 PRIMARY KEY (project_id, resource_id);
+
+ALTER TABLE project_costs
+ADD CONSTRAINT pk_project_costs
+PRIMARY KEY (project_id, cost);
 
 ALTER TABLE project_teams
 ADD CONSTRAINT pk_project_teams
