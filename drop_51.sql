@@ -47,6 +47,9 @@ DROP CONSTRAINT fk_pr_resources;
 ALTER TABLE employees
 DROP CONSTRAINT pk_employees;
 
+ALTER TABLE employee_specialisms
+DROP CONSTRAINT pk_employee_specialisms
+
 ALTER TABLE stages
 DROP CONSTRAINT pk_stages;
 
@@ -67,6 +70,9 @@ DROP CONSTRAINT pk_resources;
 
 ALTER TABLE project_resources
 DROP CONSTRAINT pk_project_resources;
+
+ALTER TABLE project_costs
+DROP CONSTRAINT pk_project_costs;
 
 ALTER TABLE project_teams
 DROP CONSTRAINT pk_project_teams;
