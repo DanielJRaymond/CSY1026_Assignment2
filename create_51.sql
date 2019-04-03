@@ -7,7 +7,7 @@ Harry Carter
 
 CREATE TABLE employees (
 employee_id NUMBER(8),
-title 		VARCHAR2(3),
+title 		VARCHAR2(4),
 first_name 	VARCHAR2(15),
 last_name 	VARCHAR2(20),
 gender 		CHAR(1) DEFAULT 'M',
