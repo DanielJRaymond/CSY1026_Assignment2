@@ -5,6 +5,7 @@ Gabriel Cruceanu
 Harry Carter
 */
 
+
 --FOREIGN
 
 ALTER TABLE employees_specialisms
@@ -99,7 +100,6 @@ DROP TABLE actions;
 
 DROP SEQUENCE seq_meetings;
 DROP SEQUENCE seq_employees;
-DROP SEQUENCE seq_specialisms;
 DROP SEQUENCE seq_teams;
 DROP SEQUENCE seq_stages;
 DROP SEQUENCE seq_projects;

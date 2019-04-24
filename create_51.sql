@@ -5,6 +5,7 @@ Gabriel Cruceanu
 Harry Carter
 */
 
+
 CREATE TABLE employees (
 employee_id NUMBER(8),
 title 		VARCHAR2(4),
@@ -19,7 +20,7 @@ joindate 	DATE DEFAULT SYSDATE
 CREATE TABLE specialisms (
 specialism_id 	NUMBER(4),
 specialism_name VARCHAR2(20),
-specialism_desc VARCHAR2(40)
+specialism_desc VARCHAR2(100)
   );
   
 CREATE TABLE projects (
@@ -28,7 +29,7 @@ title VARCHAR2(25),
 description VARCHAR2(100),
 start_date DATE,
 end_date DATE,
-budget NUMBER(8,2)
+budget NUMBER(10,2)
 );
               
 CREATE TABLE resources (
@@ -84,7 +85,7 @@ meeting_location	VARCHAR2(30) NOT NULL
 
 CREATE TABlE actions (
 meeting_id	NUMBER(4),
-owner		VARCHAR2(25),
+owner_id		VARCHAR2(25),
 deadline	DATE DEFAULT SYSDATE
  );
 
@@ -105,11 +106,11 @@ START WITH 1000;
 
 CREATE SEQUENCE seq_meetings
 INCREMENT BY 1
-START WITH 1;
+START WITH 10;
 
 CREATE SEQUENCE seq_projects
 INCREMENT BY 1
-START WITH 10000000
+START WITH 100
 MAXVALUE 99999999;
 
 CREATE SEQUENCE seq_resources

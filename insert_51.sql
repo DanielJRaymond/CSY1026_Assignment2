@@ -9,7 +9,7 @@ Harry Carter
 -- EMPLOYEES
 INSERT INTO employees
 (employee_id, title, first_name, last_name, gender, contact_no, dob, joindate)
-VALUES (seq_employees.NEXTVAL, 'MR', 'BILL', 'GOATS', 'M', '0714655814', '29-FEB-1974', '15-AUG-1997');
+VALUES (seq_employees.NEXTVAL, 'MR', 'BILL', 'GOATS', 'M', '0714655814', '28-FEB-1974', '15-AUG-1997');
 
 INSERT INTO employees
 (employee_id, title, first_name, last_name, gender, contact_no, dob, joindate)
@@ -21,7 +21,7 @@ VALUES (seq_employees.NEXTVAL, 'MS', 'FREYJA', 'NEWBERRY', 'F', '0791472943', '1
 
 INSERT INTO employees
 (employee_id, title, first_name, last_name, gender, contact_no, dob, joindate)
-VALUES (seq_employees.NEXTVAL, 'MR', 'STEWART PHILLIPS', 'LOVECRAFT', 'M', '0794286173', '20-AUG-1890', '15-MAR-1937');
+VALUES (seq_employees.NEXTVAL, 'MR', 'STEWART PHILIPS', 'LOVECRAFT', 'M', '0794286173', '20-AUG-1890', '15-MAR-1937');
 
 INSERT INTO employees
 (employee_id, title, first_name, last_name, gender, contact_no, dob, joindate)
@@ -48,9 +48,7 @@ INSERT INTO specialisms
 (specialism_id, specialism_name, specialism_desc)
 VALUES (6093, 'DATABASE ENGINEER', 'MAINTAIN THE DATABASES');
 
-
 -- PROJECTS
-
 INSERT INTO projects
 (project_id, title, description, start_date, end_date, budget)
 VALUES (seq_projects.NEXTVAL, 'DOOR REPAIR', 'FIXING MOTORS WITHIN AUTOMATIC DOOR', '6-JUL-2001', '6-JUL-2026', 1200.00);
@@ -61,7 +59,7 @@ VALUES (seq_projects.NEXTVAL, 'ACTIONSCRIPT 4', 'UPDATE OLD ACTIONSCRIPT LANGUAG
 
 INSERT INTO projects
 (project_id, title, description, start_date, end_date, budget)
-VALUES (seq_projects.NEXTVAL, 'INTERNET REPAIR', 'TURNING IT OFF AND ON AGAIN', '9-DEC-2013', '16-DEC-2013' 0.00);
+VALUES (seq_projects.NEXTVAL, 'INTERNET REPAIR', 'TURNING IT OFF AND ON AGAIN', '9-DEC-2013', '16-DEC-2013', 0.00);
 
 INSERT INTO projects
 (project_id, title, description, start_date, end_date, budget)
@@ -70,6 +68,27 @@ VALUES (seq_projects.NEXTVAL, 'CRAMMING LAST MINUTE', 'ATTEMPTING TO FIX HORRIBL
 INSERT INTO projects
 (project_id, title, description, start_date, end_date, budget)
 VALUES (seq_projects.NEXTVAL, 'STAYING ALIVE', 'LONG TERM PROJECT REQUIRING MANY RESOURCES', '26-JUL-1999', '27-JUL-2101', 5000000.00);
+
+-- PROJECT COSTS
+INSERT INTO project_costs 
+(project_id, cost) 
+VALUES (100, 4438.16); 
+
+INSERT INTO project_costs 
+(project_id, cost) 
+VALUES (101, 2850.48); 
+
+INSERT INTO project_costs 
+(project_id, cost) 
+VALUES (102, 7219.66); 
+
+INSERT INTO project_costs 
+(project_id, cost) 
+VALUES (103, 7181.10); 
+
+INSERT INTO project_costs 
+(project_id, cost) 
+VALUES (104, 1462.95); 
 
 -- RESOURCES
 INSERT INTO resources
@@ -92,89 +111,68 @@ INSERT INTO resources
 (resource_id, name, description, cost)
 VALUES (seq_resources.NEXTVAL, 'SPICE', 'HE WHO CONTROLS THE SPICE CONTROLS THE UNIVERSE', 9972.91);
 
--- PROJECT COSTS
-INSERT INTO project_costs
-(project_id, cost)
-VALUES (seq_projects.NEXTVAL, 4438.16);
-
-INSERT INTO project_costs
-(project_id, cost)
-VALUES (seq_projects.NEXTVAL, 2850.48);
-
-INSERT INTO project_costs
-(project_id, cost)
-VALUES (seq_projects.NEXTVAL, 7219.66);
-
-INSERT INTO project_costs
-(project_id, cost)
-VALUES (seq_projects.NEXTVAL, 7181.10);
-
-INSERT INTO project_costs
-(project_id, cost)
-VALUES (seq_projects.NEXTVAL, 1462.95);
-
 -- PROJECT RESOURCES
-INSERT INTO project_resources
-(project_id, resource_id, quantity)
-VALUES (seq_projects.NEXTVAL, seq_resources.NEXTVAL, 7183);
+INSERT INTO project_resources 
+(project_id, resource_id, quantity) 
+VALUES (100, 10000000, 7183); 
 
 INSERT INTO project_resources
 (project_id, resource_id, quantity)
-VALUES (seq_projects.NEXTVAL, seq_resources.NEXTVAL, 3009);
+VALUES (101, 10000001, 3009);
 
 INSERT INTO project_resources
 (project_id, resource_id, quantity)
-VALUES (seq_projects.NEXTVAL, seq_resources.NEXTVAL, 2482);
+VALUES (102, 10000002, 2482);
 
 INSERT INTO project_resources
 (project_id, resource_id, quantity)
-VALUES (seq_projects.NEXTVAL, seq_resources.NEXTVAL, 2389);
+VALUES (103, 10000003, 2389);
 
 INSERT INTO project_resources
 (project_id, resource_id, quantity)
-VALUES (seq_projects.NEXTVAL, seq_resources.NEXTVAL, 8183);
+VALUES (104, 10000004, 8183);
 
 -- EMPLOYEES SPECIALISMS
 INSERT INTO employees_specialisms
 (employee_id, specialism_id, specialism_name)
-VALUES (seq_employees.NEXTVAL, 6093, 'DATABASE ENGINEER');
+VALUES (10000000, 6093, 'DATABASE ENGINEER');
 
 INSERT INTO employees_specialisms
 (employee_id, specialism_id, specialism_name)
-VALUES (seq_employees.NEXTVAL, 7063, 'RECEPTIONIST');
+VALUES (10000001, 7063, 'RECEPTIONIST');
 
 INSERT INTO employees_specialisms
 (employee_id, specialism_id, specialism_name)
-VALUES (seq_employees.NEXTVAL, 6093, 'DATABASE ENGINEER');
+VALUES (10000002, 6093, 'DATABASE ENGINEER');
 
 INSERT INTO employees_specialisms
 (employee_id, specialism_id, specialism_name)
-VALUES (seq_employees.NEXTVAL, 9179, 'CODE MONKEY');
+VALUES (10000003, 9179, 'CODE MONKEY');
 
 INSERT INTO employees_specialisms
 (employee_id, specialism_id, specialism_name)
-VALUES (seq_employees.NEXTVAL, 6093, 'DATABASE ENGINEER');
+VALUES (10000004, 6093, 'DATABASE ENGINEER');
 
 -- PROJECT TEAMS
-INSERT INTO project_teams
-(employee_id, project_id, team_no)
-VALUES (seq_employees.NEXTVAL, seq_projects.NEXTVAL, seq_teams.NEXTVAL);
+INSERT INTO project_teams 
+(employee_id, project_id, team_no) 
+VALUES (10000000, 100, seq_teams.NEXTVAL); 
 
 INSERT INTO project_teams
 (employee_id, project_id, team_no)
-VALUES (seq_employees.NEXTVAL, seq_projects.NEXTVAL, seq_teams.NEXTVAL);
+VALUES (10000001, 101, seq_teams.NEXTVAL);
 
 INSERT INTO project_teams
 (employee_id, project_id, team_no)
-VALUES (seq_employees.NEXTVAL, seq_projects.NEXTVAL, seq_teams.NEXTVAL);
+VALUES (10000002, 102, seq_teams.NEXTVAL);
 
 INSERT INTO project_teams
 (employee_id, project_id, team_no)
-VALUES (seq_employees.NEXTVAL, seq_projects.NEXTVAL, seq_teams.NEXTVAL);
+VALUES (10000003, 103, seq_teams.NEXTVAL);
 
 INSERT INTO project_teams
 (employee_id, project_id, team_no)
-VALUES (seq_employees.NEXTVAL, seq_projects.NEXTVAL, seq_teams.NEXTVAL);
+VALUES (10000004, 104, seq_teams.NEXTVAL);
 
 -- STAGES
 INSERT INTO stages
@@ -204,62 +202,62 @@ VALUES (seq_stages.NEXTVAL, 'TESTING', '6-JUN-2019', '28-JUN-2019');
 -- PROJECT STAGES
 INSERT INTO project_stages
 (project_id, stage_id)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL);
+VALUES (100, 1000);
 
 INSERT INTO project_stages
 (project_id, stage_id)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL);
+VALUES (101, 1001);
 
 INSERT INTO project_stages
 (project_id, stage_id)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL);
+VALUES (102, 1002);
 
 INSERT INTO project_stages
 (project_id, stage_id)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL);
+VALUES (103, 1003);
 
 INSERT INTO project_stages
 (project_id, stage_id)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL);
+VALUES (104, 1004);
 
 -- MEETINGS
-INSERT INTO meetings
-(project_id, stage_id, team_no, meeting_id, meeting_date, meeting_location)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL, seq_teams.NEXTVAL, seq_meetings.NEXTVAL, '14-FEB-2003', 'MEETING ROOM A');
+INSERT INTO meetings 
+(project_id, stage_id, team_no, meeting_id, meeting_date, meeting_location) 
+VALUES (100, 1000, 1, seq_meetings.NEXTVAL, '14-FEB-2003', 'MEETING ROOM A'); 
 
 INSERT INTO meetings
 (project_id, stage_id, team_no, meeting_id, meeting_date, meeting_location)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL, seq_teams.NEXTVAL, seq_meetings.NEXTVAL, '27-JUL-1995', 'MEETING ROOM C');
+VALUES (101, 1001, 2, seq_meetings.NEXTVAL, '27-JUL-1995', 'MEETING ROOM C');
 
 INSERT INTO meetings
 (project_id, stage_id, team_no, meeting_id, meeting_date, meeting_location)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL, seq_teams.NEXTVAL, seq_meetings.NEXTVAL, '9-AUG-2008', 'MEETING ROOM F');
+VALUES (102, 1002, 3, seq_meetings.NEXTVAL, '9-AUG-2008', 'MEETING ROOM F');
 
 INSERT INTO meetings
 (project_id, stage_id, team_no, meeting_id, meeting_date, meeting_location)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL, seq_teams.NEXTVAL, seq_meetings.NEXTVAL, '22-JUL-2010', 'MEETING ROOM A');
+VALUES (103, 1003, 4, seq_meetings.NEXTVAL, '22-JUL-2010', 'MEETING ROOM A');
 
 INSERT INTO meetings
 (project_id, stage_id, team_no, meeting_id, meeting_date, meeting_location)
-VALUES (seq_projects.NEXTVAL, seq_stages.NEXTVAL, seq_teams.NEXTVAL, seq_meetings.NEXTVAL, '17-DEC-2017', 'MEETING ROOM Z');
+VALUES (104, 1004, 5, seq_meetings.NEXTVAL, '17-DEC-2017', 'MEETING ROOM Z');
 
 -- ACTIONS
-INSERT INTO actions
-(meeting_id, owner, deadline)
-VALUES (seq_meetings.NEXTVAL, 'GG', '27-OCT-2013');
+INSERT INTO actions 
+(meeting_id, owner_id, deadline) 
+VALUES (10, 'GG', '27-OCT-2013'); 
 
 INSERT INTO actions
-(meeting_id, owner, deadline)
-VALUES (seq_meetings.NEXTVAL, 'BG', '5-NOV-1997');
+(meeting_id, owner_id, deadline)
+VALUES (11, 'BG', '5-NOV-1997');
 
 INSERT INTO actions
-(meeting_id, owner, deadline)
-VALUES (seq_meetings.NEXTVAL, 'BG', '10-MAR-2018');
+(meeting_id, owner_id, deadline)
+VALUES (12, 'SL', '10-MAR-2018');
 
 INSERT INTO actions
-(meeting_id, owner, deadline)
-VALUES (seq_meetings.NEXTVAL, 'SP', '19-JUN-2008');
+(meeting_id, owner_id, deadline)
+VALUES (13, 'SP', '19-JUN-2008');
 
 INSERT INTO actions
-(meeting_id, owner, deadline)
-VALUES (seq_meetings.NEXTVAL, 'FN', '4-SEP-2001');
+(meeting_id, owner_id, deadline)
+VALUES (14, 'FN', '4-SEP-2001');

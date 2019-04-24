@@ -5,16 +5,22 @@ Gabriel Cruceanu
 Harry Carter
 */
 
--- EMPLOYEES
-SELECT * FROM employees
-ORDER BY first_name;
 
+-- EMPLOYEES
+
+--List all daya about the employees based on their first name starting from A;
+SELECT * FROM employees 
+ORDER BY first_name ASC;
+
+--List all data about the employees based on their title
 SELECT * FROM employees
 WHERE title IN('MR', 'LORD');
 
+--List all data about the employees whose names do not start with the letter S
 SELECT * FROM employees
 WHERE first_name LIKE 'S%';
 
+--List the employees by their last name and the specialism they have
 SELECT e.last_name, es.specialism_name
 FROM employees e INNER JOIN employees_specialisms es
 on  e.employee_id = es.employee_id;
@@ -44,8 +50,8 @@ FROM employees e, employees_specialisms es
 WHERE es.specialism_name NOT LIKE 'DATABASE ENGINEER';
 
 -- STAGES
-SELECT stage_name FROM stages
-WHERE end_date NOT LIKE '%FEB%';
+SELECT stage_name, start_date FROM stages 
+WHERE end_date NOT LIKE '%FEB%'
 ORDER BY start_date ASC;
 
 -- MEETINGS

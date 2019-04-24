@@ -5,6 +5,7 @@ Gabriel Cruceanu
 Harry Carter
 */
 
+
 --PRIMARY KEYS
 
 ALTER TABLE employees
@@ -33,7 +34,7 @@ PRIMARY KEY (meeting_id);
 
 ALTER TABLE actions
 ADD CONSTRAINT pk_actions
-PRIMARY KEY (owner);
+PRIMARY KEY (owner_id);
 
 ALTER TABLE projects
 ADD CONSTRAINT pk_projects
